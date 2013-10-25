@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<meta charset="utf-8" /> 	
+	<title>Image Search</title> 
+	<link rel="stylesheet"  href="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.css" />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.min.js"></script> 
+    <script type="text/javascript" src="setting.js"></script> 
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.js"></script>			
+</head> 
+<body>  
+  <div data-role="page" data-theme="b"> 
+    <div data-role="header">
+  		<h1>Image Search</h1>        
+  	</div>  
+  	<div data-role="content">	
+
+  		<form id="myForm" action="imageSearch.aspx" method="post">
+
+        <div data-role="fieldcontain">  
+            <label for="imageName">이미지:</label>                  
+           <input type="search" name="imageName" id="imageName" placeholder="검색할 이미지 이름을 입력해 주세요" />           
+        </div>   
+           
+        <div data-role="fieldcontain">                         
+            <fieldset data-role="controlgroup" data-type="horizontal">          
+                <legend>정렬기준:</legend>
+   	            <input type="radio" name="sortBase" id="sortBase1" value="date-posted" checked="checked" data-theme="c"  />
+   	            <label for="sortBase1">등록일</label>               
+              
+   	            <input type="radio" name="sortBase" id="sortBase2" value="interestingness" data-theme="c"   />
+   	            <label for="sortBase2">관심도</label>        
+            </fieldset>                                                      
+        </div>
+
+        <div data-role="fieldcontain">
+            <label for="sortDirection">정렬방향:</label>
+            <select name="sortDirection" id="sortDirection" data-theme="d">
+	            <option value="desc">내림차순</option>
+	            <option value="asc">오름차순</option>	          
+            </select>
+        </div>
+                   
+        <div data-role="fieldcontain">   
+          <center>
+          <button type="submit" data-theme="b" value="submit" data-inline="true">검색</button>
+          <button type="reset" data-inline="true">Reset</button>         
+          </center>
+        </div>
+
+      </form>  
+      		
+  	</div>  	
+  	<div data-role="footer">
+  		<h4><i>with flickr.com</i></h4>
+  	</div>  	  	  		
+  </div>        
+</body>
+</html>

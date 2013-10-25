@@ -1,0 +1,10 @@
+.etcBox {
+  background-color: #FFFFFF;
+  margin:0px;
+  padding:3px;
+  border: 5px solid #CCCCCC;
+  font-family: verdana, arial, sans-serif;
+  font-size: 11px;
+  line-height: 18px;
+  color: #666666;     
+}

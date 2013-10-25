@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+  <title>HTML5-WebStorage</title> 
+  <script type="text/javascript">    
+  
+    //Local Storage에 데이터 저장             
+    function setLocalStorage(){
+      if(!!window['localStorage']){
+        var textBox = document.querySelector('#textBox1');
+        window.localStorage['key1'] = textBox.value;
+      }      
+    }      
+    //Local Storage 조회
+    function getLocalStorage(){
+      if(!!window['localStorage']){
+        var textBox = document.querySelector('#textBox2');
+        textBox.value = window.localStorage['key1'];
+      }
+    }    
+    //Session Storage에 데이터 저장
+    function setSessionStorage(){
+      if(!!window['sessionStorage']){
+        var textBox = document.querySelector('#textBox3');
+        window.sessionStorage['key1'] = textBox.value;
+      }
+    }      
+    //Session Storage 조회
+    function getSessionStorage(){
+      if(!!window['sessionStorage']){
+        var textBox = document.querySelector('#textBox4');
+        textBox.value = window.sessionStorage['key1'];
+      }
+    }    
+  </script>  
+</head> 
+<body> 
+  <input type="text" id="textBox1"> 
+  <button onclick="setLocalStorage()">Local Storage에 데이터 저장</button>
+  <br>    
+  <input type="text" id="textBox2"> 
+  <button onclick="getLocalStorage()">Local Storage 조회</button>    
+  <hr>    
+  <input type="text" id="textBox3"> 
+  <button onclick="setSessionStorage()">Session Storage에 데이터 저장</button>
+  <br>    
+  <input type="text" id="textBox4"> 
+  <button onclick="getSessionStorage()">Session Storage 조회</button>     
+</body> 
+</html>
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>HTML5-Application Cache</title>
+  <link rel="stylesheet" type="text/css" href="ac.css">
+  <script type="text/JavaScript" src="ac.js"></script>
+  <script type="text/JavaScript">
+    var isSupportCache = supports_offline();
+    if(supports_offline) {
+        alert("현재 브라우저는 어플리케이션 캐시를 지원합니다")
+    }
+    else{
+        alert("현재 브라우저는 어플리케이션 캐시를 지원하지 않습니다")
+    }
+  </script>
+</head>
+<body> 
+  <div class='etcBox'> Hello, Application Cache !  </div>     
+  <img src="mkex_offline.jpg"><br>
+  <img src="mkex_online.jpg"><br>
+</body>
+</html>
+

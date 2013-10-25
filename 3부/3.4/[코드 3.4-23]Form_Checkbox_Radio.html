@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8" /> 	
+<title>jQuery Mobile</title> 
+<link rel="stylesheet"  href="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.min.js"></script> 	
+<script type="text/javascript" src="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.js"></script>		
+</head> 
+<body>
+  <div data-role="page">       
+    <div data-role="header">	    
+      <h1>Checkbox & Radio</h1>
+    </div>						
+    <div data-role="content">
+    
+      <div  data-role="fieldcontain">
+      <fieldset data-role="controlgroup">
+      	<legend>CheckBox:</legend>
+      	<input type="checkbox" name="checkbox1" id="checkbox1" />
+      	<label for="checkbox1">Check1</label>
+      	<input type="checkbox" name="checkbox2" id="checkbox2" />
+      	<label for="checkbox2">Check2</label>					
+      	<input type="checkbox" name="checkbox3" id="checkbox3" />
+      	<label for="checkbox3">Check3</label>				
+      </fieldset>
+      </div>
+      
+      <div data-role="fieldcontain">
+      <fieldset data-role="controlgroup">
+      <legend>Radio Button:</legend>
+         	<input type="radio" name="radio1" id="radio1" value="choice1" checked="checked"  />
+         	<label for="radio1">Radio1</label>
+         	<input type="radio" name="radio1" id="radio2" value="choice2"  />
+         	<label for="radio2">Radio2</label>
+         	<input type="radio" name="radio1" id="radio3" value="choice3"  />
+         	<label for="radio3">Radio3</label>        
+      </fieldset>
+      </div>
+
+
+    </div>    	  	  	
+  </div>                          
+</body>
+</html>

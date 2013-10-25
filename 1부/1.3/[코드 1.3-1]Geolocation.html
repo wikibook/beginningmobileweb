@@ -1,0 +1,35 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+  <title>HTML5-Geolocation</title> 
+</head> 
+<body> 
+  <div id="msg"></div>  
+  <script type="text/javascript"> 
+  
+    //navigator.geolocation 객체를 조사해서 위치 정보가 지원되는지 확인한다.
+    if (!!navigator.geolocation){
+      //getCurrentPosition() 메서드로 위치 정보를 조회한다.
+      //성공과 실패 시 각각 호출되는 콜백 함수를 지정한다.
+      navigator.geolocation.getCurrentPosition(successCallback,errorCallback);  
+    }
+    else{
+      alert("이 브라우저는 Geolocation을 지원하지 않습니다");
+    }      
+    
+    //위치 정보 조회가 성공하면 호출되는 콜백 함수
+    function successCallback(position){
+      var lat = position.coords.latitude;   //위도
+      var lng = position.coords.longitude; //경도      
+      document.getElementById("msg").innerHTML = "위도" + lat + ", 경도:"+lng
+    }    
+    
+    //위치 정보 조회가 실패하면 호출되는 콜백 함수
+    function errorCallback(error){
+      alert(error.message);
+    }    
+  </script>  
+</body> 
+</html>
+
